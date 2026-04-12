@@ -6,6 +6,78 @@
   <title>About Allure Builders | Calgary's Premier Renovation Company Since 1988</title>
   <meta name="description" content="Allure Builders — Calgary's fully insured general contractor since 1988. Over 38 years of residential and commercial renovation excellence across Alberta." />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── AWARDS SECTION ──────────────────────────────── */
+    .awards-section {
+      background: var(--off-white);
+      padding: var(--section-pad) var(--pad-x);
+    }
+
+    .awards-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .awards-text .section-title {
+      margin: 12px 0 20px;
+    }
+
+    .awards-text p {
+      font-size: 0.97rem;
+      font-weight: 300;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .awards-list {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .awards-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      font-weight: 300;
+    }
+
+    .awards-list-item::before {
+      content: '◆';
+      color: var(--gold);
+      font-size: 0.55rem;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .awards-img-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .awards-house-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 900px) {
+      .awards-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -29,6 +101,7 @@
       <li><a href="index.html">Residential</a></li>
       <li><a href="commercial.html">Commercial</a></li>
       <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="more-work.html">More Work</a></li>
     </ul>
 
     <div class="nav-right">
@@ -46,6 +119,7 @@
   <a href="index.html">Residential</a>
   <a href="commercial.html">Commercial</a>
   <a href="about.html">About Us</a>
+  <a href="more-work.html">More Work</a>
   <a href="#contact">Free Quote</a>
   <p class="mobile-menu-phone">403 607 5220</p>
 </div>
@@ -107,7 +181,7 @@
 <section class="about-intro section-full" id="about">
   <div class="about-intro-inner">
     <div class="about-img-wrap reveal">
-      <img src="images/hero-residential.jpg" alt="Allure Builders renovation work in progress" style="object-position: center 70%;" />
+      <img src="images/about-team.jpg" alt="Allure Builders renovation work in progress" style="object-position: center center;" />
       <div class="about-badge">
         <div class="badge-num">38+</div>
         <div class="badge-text">Years<br>in Business</div>
@@ -201,30 +275,177 @@
 <!-- ── SERVICE AREAS ───────────────────────────────── -->
 <section>
   <div class="section-wrap">
-    <div style="background: var(--off-white); padding: 52px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;" class="reveal">
-      <div>
-        <div class="section-eyebrow"><span>Where We Work</span></div>
-        <h2 class="section-title">Serving <em>Greater Calgary</em></h2>
-        <p class="section-subtitle">
-          Based in Crowfoot NW, we serve all neighbourhoods of Calgary and the surrounding region — from Airdrie and Cochrane to Okotoks and Chestermere.
-        </p>
-        <a href="#contact" class="btn-primary btn-arrow" style="margin-top: 32px;">Check Your Area</a>
-      </div>
-      <div>
-        <div style="background: var(--cream); padding: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px;">
-          <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">NW Calgary</div>
-          <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">SW Calgary</div>
-          <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">NE Calgary</div>
-          <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">SE Calgary</div>
-          <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">Airdrie</div>
-          <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">Cochrane</div>
-          <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">Chestermere</div>
-          <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">Okotoks</div>
-          <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0;">Rocky View County</div>
-          <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0;">&amp; Surrounding Area</div>
+    <div class="reveal" style="background: var(--off-white); padding: 52px; display: flex; flex-direction: column; gap: 52px;">
+
+      <!-- Row 1: Where we work -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+        <div>
+          <div class="section-eyebrow"><span>Where We Work</span></div>
+          <h2 class="section-title">Serving <em>Greater Calgary</em></h2>
+          <p class="section-subtitle">
+            Based in Crowfoot NW, we serve all neighbourhoods of Calgary and the surrounding region — from Airdrie and Cochrane to Okotoks and Chestermere.
+          </p>
+          <a href="#contact" class="btn-primary btn-arrow" style="margin-top: 32px;">Check Your Area</a>
+        </div>
+        <div>
+          <div style="background: var(--cream); padding: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px;">
+            <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">NW Calgary</div>
+            <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">SW Calgary</div>
+            <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">NE Calgary</div>
+            <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">SE Calgary</div>
+            <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">Airdrie</div>
+            <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">Cochrane</div>
+            <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">Chestermere</div>
+            <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0; border-bottom: 1px solid var(--gray-200);">Okotoks</div>
+            <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0;">Rocky View County</div>
+            <div style="font-size: 0.85rem; font-weight: 300; color: var(--gray-600); padding: 8px 0;">&amp; Surrounding Area</div>
+          </div>
         </div>
       </div>
+
+      <!-- Divider -->
+      <div style="height: 1px; background: var(--gray-200);"></div>
+
+      <!-- Row 2: Leadership card -->
+      <div style="display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center;">
+
+        <!-- Identity -->
+        <div style="display: flex; align-items: center; gap: 24px; flex-shrink: 0;">
+          <div style="
+            width: 72px; height: 72px; border-radius: 50%;
+            background: var(--gray-800);
+            border: 1.5px solid var(--gold);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1.9rem; font-weight: 300;
+            color: var(--gold);
+            flex-shrink: 0;
+          ">D</div>
+          <div>
+            <div style="
+              font-family: var(--font-display);
+              font-size: 1.4rem; font-weight: 500;
+              color: var(--gray-800); letter-spacing: 0.02em;
+              line-height: 1.2;
+            ">Darren Smith</div>
+            <div style="
+              font-size: 0.7rem; font-weight: 500;
+              letter-spacing: 0.18em; text-transform: uppercase;
+              color: var(--gold); margin-top: 5px;
+            ">Executive Director</div>
+          </div>
+        </div>
+
+        <!-- Vertical rule -->
+        <div style="display: contents;">
+          <div style="display: flex; align-items: stretch; gap: 48px;">
+
+            <div style="width: 1px; background: var(--gray-200); flex-shrink: 0;"></div>
+
+            <!-- Expertise items -->
+            <div style="display: flex; gap: 40px; flex-wrap: wrap; align-items: flex-start;">
+
+              <!-- Construction Strategy -->
+              <div style="display: flex; align-items: flex-start; gap: 14px; min-width: 160px;">
+                <div style="
+                  width: 40px; height: 40px; border-radius: 4px;
+                  background: var(--cream); border: 1px solid var(--gray-200);
+                  display: flex; align-items: center; justify-content: center;
+                  flex-shrink: 0;
+                ">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a26a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-800); margin-bottom: 3px;">Construction Strategy</div>
+                  <div style="font-size: 0.8rem; font-weight: 300; color: var(--gray-400); line-height: 1.5;">End-to-end project planning &amp; execution</div>
+                </div>
+              </div>
+
+              <!-- Company Analysis -->
+              <div style="display: flex; align-items: flex-start; gap: 14px; min-width: 160px;">
+                <div style="
+                  width: 40px; height: 40px; border-radius: 4px;
+                  background: var(--cream); border: 1px solid var(--gray-200);
+                  display: flex; align-items: center; justify-content: center;
+                  flex-shrink: 0;
+                ">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a26a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"/>
+                    <line x1="12" y1="20" x2="12" y2="4"/>
+                    <line x1="6"  y1="20" x2="6"  y2="14"/>
+                    <line x1="2"  y1="20" x2="22" y2="20"/>
+                  </svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-800); margin-bottom: 3px;">Company Analysis</div>
+                  <div style="font-size: 0.8rem; font-weight: 300; color: var(--gray-400); line-height: 1.5;">Performance metrics &amp; growth insight</div>
+                </div>
+              </div>
+
+              <!-- Team Organization -->
+              <div style="display: flex; align-items: flex-start; gap: 14px; min-width: 160px;">
+                <div style="
+                  width: 40px; height: 40px; border-radius: 4px;
+                  background: var(--cream); border: 1px solid var(--gray-200);
+                  display: flex; align-items: center; justify-content: center;
+                  flex-shrink: 0;
+                ">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a26a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 010 7.75"/>
+                  </svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-800); margin-bottom: 3px;">Team Organization</div>
+                  <div style="font-size: 0.8rem; font-weight: 300; color: var(--gray-400); line-height: 1.5;">Coordinating trades &amp; field operations</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- ── AWARDS ──────────────────────────────────────── -->
+<section class="awards-section" id="awards">
+  <div class="awards-inner reveal">
+
+    <div class="awards-text">
+      <div class="section-eyebrow"><span>Industry Recognition</span></div>
+      <h2 class="section-title">Built on <em>Proven Excellence</em></h2>
+      <p>
+        Our work speaks for itself — and so does the industry. Over the course of 38 years, Allure Residential &amp; Commercial Inc. has been recognized by some of the most respected organizations in Canadian construction and renovation.
+      </p>
+      <p>
+        These awards aren't just plaques on a wall. They reflect the thousands of hours our team puts into every project, the trust our clients place in us, and the standard of craftsmanship we refuse to compromise on — job after job, year after year.
+      </p>
+      <div class="awards-list">
+        <div class="awards-list-item">Best of Houzz — Service Award, 2016–2019</div>
+        <div class="awards-list-item">BILD Calgary Region Awards — Winner, 2018</div>
+        <div class="awards-list-item">National Awards for Housing Excellence — Winner, 2019</div>
+        <div class="awards-list-item">HomeStars Best Of Award — 2016–2019</div>
+        <div class="awards-list-item">Canada Best — Recognized Contractor</div>
+        <div class="awards-list-item">BestProdsTown — Recommended Business</div>
+      </div>
+    </div>
+
+    <div class="awards-img-wrap">
+      <img
+        src="images/about-us-awards.jpg"
+        alt="Allure Builders award-winning renovation work and industry recognition"
+        class="awards-house-img"
+      />
+    </div>
+
   </div>
 </section>
 
@@ -337,6 +558,24 @@
             <span class="contact-label">Hours</span>
             <span class="contact-value">Monday – Friday: 7am – 6pm<br>Saturday: 8am – 4pm</span>
           </div>
+        </div>
+      </div>
+
+      <div class="contact-social">
+        <span class="contact-social-label">Follow Us</span>
+        <div class="contact-social-links">
+          <a href="https://www.instagram.com/allure_res_comm" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/p/Allure-Residential-Commercial-Inc-100063519582144/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
         </div>
       </div>
     </div>

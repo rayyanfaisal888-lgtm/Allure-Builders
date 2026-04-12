@@ -92,7 +92,7 @@ if (lightbox) {
 
 // ── CONTACT FORM ─────────────────────────────────────────────────
 // Replace the WEBHOOK_URL below with your Zapier webhook URL
-const WEBHOOK_URL = 'YOUR_ZAPIER_WEBHOOK_URL_HERE';
+const WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/27153078/u7lnk56/';
 
 document.querySelectorAll('.contact-form').forEach(form => {
   form.addEventListener('submit', async (e) => {

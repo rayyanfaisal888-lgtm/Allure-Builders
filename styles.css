@@ -619,6 +619,47 @@ button { font-family: var(--font-body); cursor: pointer; border: none; }
 .service-card:hover .service-learn { opacity: 1; transform: translateX(0); }
 .service-learn::after { content: '→'; }
 
+/* Text-only service card variant */
+.service-card--text {
+  background: var(--near-black);
+  border-left: 2px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 28px 28px;
+  cursor: default;
+}
+.service-card--text .service-info {
+  position: static;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.service-card--text .service-desc {
+  max-height: none;
+  opacity: 0.75;
+  overflow: visible;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+.service-card--text .service-divider {
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+  margin: 16px 0;
+  opacity: 0.6;
+}
+.service-card--text .service-icon {
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--gold);
+  opacity: 0.4;
+  font-size: 1.1rem;
+  letter-spacing: 0.3em;
+}
+
 /* Services 2-col layout for commercial */
 .services-grid-2 {
   display: grid;
@@ -1208,4 +1249,48 @@ button { font-family: var(--font-body); cursor: pointer; border: none; }
   .form-wrap { padding: 28px 20px; }
   .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 280px; }
   .hero-scroll { display: none; }
+}
+
+
+/* ── SOCIAL LINKS (contact section) ─────────────────── */
+.contact-social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(201,162,106,0.2);
+}
+
+.contact-social-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+.contact-social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(201,162,106,0.35);
+  border-radius: 50%;
+  color: var(--gray-400);
+  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+  flex-shrink: 0;
+}
+
+.social-link:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201,162,106,0.08);
 }
