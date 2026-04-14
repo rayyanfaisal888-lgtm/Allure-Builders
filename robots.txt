@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rayyanfaisal888-lgtm.github.io/Allure-Builders/sitemap.xml
