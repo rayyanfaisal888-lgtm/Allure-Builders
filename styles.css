@@ -277,6 +277,22 @@ button { font-family: var(--font-body); cursor: pointer; border: none; }
   object-position: center;
   animation: none;
 }
+.hero-vimeo-wrap {
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero-vimeo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  min-width: 177.78vh;
+  transform: translate(-50%, -50%);
+  border: 0;
+  pointer-events: none;
+}
 @keyframes heroZoom {
   from { transform: scale(1.02); }
   to   { transform: scale(1.0);  }
