@@ -12,7 +12,7 @@
 }
 
 body {
-  animation: pageFadeIn 0.35s ease forwards;
+  animation: pageFadeIn 0.50s ease forwards;
 }
 @keyframes pageFadeIn {
   from { opacity: 0; }
